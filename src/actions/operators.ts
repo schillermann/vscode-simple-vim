@@ -105,7 +105,7 @@ export const operators: Action[] = [
     }),
 ];
 
-function cursorsToRangesStart(editor: vscode.TextEditor, ranges: (vscode.Range | undefined)[]) {
+function cursorsToRangesStart(editor: vscode.TextEditor, ranges: readonly (vscode.Range | undefined)[]) {
     editor.selections = editor.selections.map((selection, i) => {
         const range = ranges[i];
 
@@ -118,7 +118,7 @@ function cursorsToRangesStart(editor: vscode.TextEditor, ranges: (vscode.Range |
     });
 }
 
-function delete_(editor: vscode.TextEditor, ranges: (vscode.Range | undefined)[], linewise: boolean) {
+function delete_(editor: vscode.TextEditor, ranges: readonly (vscode.Range | undefined)[], linewise: boolean) {
     editor.edit(editBuilder => {
         ranges.forEach(range => {
             if (!range) return;
@@ -163,7 +163,7 @@ function delete_(editor: vscode.TextEditor, ranges: (vscode.Range | undefined)[]
     });
 }
 
-function yank(vimState: VimState, editor: vscode.TextEditor, ranges: (vscode.Range | undefined)[], linewise: boolean) {
+function yank(vimState: VimState, editor: vscode.TextEditor, ranges: readonly (vscode.Range | undefined)[], linewise: boolean) {
     vimState.registers = {
         contentsList: ranges.map((range, i) => {
             if (range) {

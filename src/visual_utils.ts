@@ -5,7 +5,7 @@ import * as positionUtils from './position_utils';
 // This fixes the selection anchor when selection is changed so that active and anchor are reversed.
 // For most motions we use execMotion for perfect visual mode emulation, but for some we need to
 // use VSCode's cursorMove instead and this function allows us to fix the selection after the fact.
-export function setVisualSelections(editor: vscode.TextEditor, originalSelections: vscode.Selection[]): void {
+export function setVisualSelections(editor: vscode.TextEditor, originalSelections: readonly vscode.Selection[]): void {
     editor.selections = editor.selections.map((selection, i) => {
         const originalSelection = originalSelections[i];
 

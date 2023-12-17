@@ -140,7 +140,7 @@ export function parseKeysOperator(
     operator: (
         vimState: VimState,
         editor: vscode.TextEditor,
-        ranges: (vscode.Range | undefined)[],
+        ranges: readonly (vscode.Range | undefined)[],
         linewise: boolean,
     ) => void,
 ): Action {
@@ -150,7 +150,7 @@ export function parseKeysOperator(
             return operatorResult.status;
         }
 
-        let ranges: (vscode.Range | undefined)[];
+        let ranges: readonly (vscode.Range | undefined)[];
         let linewise = true;
         if (vimState.mode === Mode.Normal) {
             if (operatorResult.rest.length === 0) {

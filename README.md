@@ -1,8 +1,8 @@
-# SimpleVim
+# VimKeymaps
 
 An opinionated Vim-like extension for VSCode that prioritizes simplicity (of use and implementation) and integration with native VSCode features.
 
-Once you enter Insert mode it will be a completely vanilla VSCode experience: the only event SimpleVim will listen for is the `Escape` key to go back to Normal mode.
+Once you enter Insert mode it will be a completely vanilla VSCode experience: the only event VimKeymaps will listen for is the `Escape` key to go back to Normal mode.
 
 
 ## Operators
@@ -130,29 +130,29 @@ Actions are miscellaneous commands that don't follow the well-defined patterns o
 
 ## Differences From Vim
 
-SimpleVim prioritizes simplicity and integration with native VSCode features over compatability with Vim. If full Vim compatibility is important to you, consider trying a different extension. Here are some of the ways SimpleVim is different from Vim.
+VimKeymaps prioritizes simplicity and integration with native VSCode features over compatability with Vim. If full Vim compatibility is important to you, consider trying a different extension. Here are some of the ways VimKeymaps is different from Vim.
 
-- SimpleVim has no macros. Instead it has first class multiple cursor support which you can use to achieve something similar. You can place additional cursors by any of the ways native to VSCode including: `Cmd+d`, `Cmd+Alt+Down` or `Alt+Click`. Simply place cursors everywhere you would have run the macro and see your changes to each place in real time.
+- VimKeymaps has no macros. Instead it has first class multiple cursor support which you can use to achieve something similar. You can place additional cursors by any of the ways native to VSCode including: `Cmd+d`, `Cmd+Alt+Down` or `Alt+Click`. Simply place cursors everywhere you would have run the macro and see your changes to each place in real time.
 
-- SimpleVim has no `.` (repeat) command. Use multiple cursors instead (see previous bullet).
+- VimKeymaps has no `.` (repeat) command. Use multiple cursors instead (see previous bullet).
 
-- SimpleVim has no count. In Vim you can prefix commands with a number and it will run them that many times. In SimpleVim that is not supported. Instead you can just type the command again or use a command that accomplishes your goal with fewer repetitions.
+- VimKeymaps has no count. In Vim you can prefix commands with a number and it will run them that many times. In VimKeymaps that is not supported. Instead you can just type the command again or use a command that accomplishes your goal with fewer repetitions.
 
-- SimpleVim lets the cursor go one past the last character of the line in Normal mode. It would be nice to prevent this, but because of VSCode's selection model and extension API there is no good way to do it. It would require ugly hacks and would make other parts of the SimpleVim experience buggy.
+- VimKeymaps lets the cursor go one past the last character of the line in Normal mode. It would be nice to prevent this, but because of VSCode's selection model and extension API there is no good way to do it. It would require ugly hacks and would make other parts of the VimKeymaps experience buggy.
 
-- SimpleVim has no registers. Instead the operators have been modified so deleting text does not overwrite the text you yanked. A new `r` operator has been added for when you want to yank and delete text at the same time.
+- VimKeymaps has no registers. Instead the operators have been modified so deleting text does not overwrite the text you yanked. A new `r` operator has been added for when you want to yank and delete text at the same time.
 
-- SimpleVim's `f` and `t` motions work slightly differently from Vim's. `t` and `f` behave like Vim's `/` command, but `t` takes one character and `f` takes two. Or in other words, `t` works like Vim's `t` in Normal mode but Vim's `f` in Visual mode. And `f` behaves like the vim-sneak plugin.
+- VimKeymaps's `f` and `t` motions work slightly differently from Vim's. `t` and `f` behave like Vim's `/` command, but `t` takes one character and `f` takes two. Or in other words, `t` works like Vim's `t` in Normal mode but Vim's `f` in Visual mode. And `f` behaves like the vim-sneak plugin.
 
-- SimpleVim has no `/` (search) command. Instead you can either use the `f` motion or the native VSCode find. Between them most of the uses for `/` are taken care of.
+- VimKeymaps has no `/` (search) command. Instead you can either use the `f` motion or the native VSCode find. Between them most of the uses for `/` are taken care of.
 
-- SimpleVim has no `>` (indent) command. Instead you can use VSCode's `Cmd+]`.
+- VimKeymaps has no `>` (indent) command. Instead you can use VSCode's `Cmd+]`.
 
-- SimpleVim has no `gU` (uppercase) command. Instead you can use VSCode's `Transform to Uppercase` from the Command Palette.
+- VimKeymaps has no `gU` (uppercase) command. Instead you can use VSCode's `Transform to Uppercase` from the Command Palette.
 
-- SimpleVim has no jump list (`Ctrl+o` and `Ctrl+i` in Vim). Instead you can use VSCode's native jump list with `Ctrl+-` and `Ctrl+_`.
+- VimKeymaps has no jump list (`Ctrl+o` and `Ctrl+i` in Vim). Instead you can use VSCode's native jump list with `Ctrl+-` and `Ctrl+_`.
 
-- SimpleVim does not support marks. If you're jumping back and forth often between two places in a file you can use VSCode's split window feature, and use `Cmd+1` and `Cmd+2` to focus them. If you just need to jump back to where you've been, you can use VSCode's `Ctrl+-`.
+- VimKeymaps does not support marks. If you're jumping back and forth often between two places in a file you can use VSCode's split window feature, and use `Cmd+1` and `Cmd+2` to focus them. If you just need to jump back to where you've been, you can use VSCode's `Ctrl+-`.
 
 
 ## Settings

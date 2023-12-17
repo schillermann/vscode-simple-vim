@@ -1,62 +1,62 @@
 {
-    "name": "simple-vim",
-    "displayName": "Simple Vim",
-    "description": "Vim extension for VSCode",
-    "version": "0.0.5",
+    "name": "vim-keymaps",
+    "displayName": "Vim Keymaps",
+    "description": "Vim Keymaps for VSCode",
+    "version": "0.1.0",
     "license": "MIT",
-    "publisher": "jpotterm",
+    "publisher": "Mario Schillermann",
     "repository": {
         "type": "git",
-        "url": "https://github.com/jpotterm/vscode-simple-vim.git"
+        "url": "https://github.com/schillermann/vscode-vim-keymaps.git"
     },
     "engines": {
-        "vscode": "^1.22.2"
+        "vscode": "^1.85.1"
     },
     "categories": [
-        "Other"
+        "Keymaps"
     ],
     "activationEvents": [
         "*"
     ],
-    "main": "./out/extension",
+    "main": "./out/extension.js",
     "contributes": {
         "keybindings": [
             {
                 "key": "Escape",
-                "command": "extension.simpleVim.escapeKey",
+                "command": "extension.vimKeymaps.escapeKey",
                 "when": "editorTextFocus"
             },
             {
                 "key": "ctrl+r",
                 "command": "redo",
-                "when": "editorTextFocus && !extension.simpleVim.insertMode"
+                "when": "editorTextFocus && !extension.vimKeymaps.insertMode"
             },
             {
                 "key": "ctrl+d",
-                "command": "extension.simpleVim.scrollDownHalfPage",
-                "when": "editorTextFocus && !extension.simpleVim.insertMode"
+                "command": "extension.vimKeymaps.scrollDownHalfPage",
+                "when": "editorTextFocus && !extension.vimKeymaps.insertMode"
             },
             {
                 "key": "ctrl+u",
-                "command": "extension.simpleVim.scrollUpHalfPage",
-                "when": "editorTextFocus && !extension.simpleVim.insertMode"
+                "command": "extension.vimKeymaps.scrollUpHalfPage",
+                "when": "editorTextFocus && !extension.vimKeymaps.insertMode"
             },
             {
                 "key": "ctrl+f",
-                "command": "extension.simpleVim.scrollDownPage",
-                "when": "editorTextFocus && !extension.simpleVim.insertMode"
+                "command": "extension.vimKeymaps.scrollDownPage",
+                "when": "editorTextFocus && !extension.vimKeymaps.insertMode"
             },
             {
                 "key": "ctrl+b",
-                "command": "extension.simpleVim.scrollUpPage",
-                "when": "editorTextFocus && !extension.simpleVim.insertMode"
+                "command": "extension.vimKeymaps.scrollUpPage",
+                "when": "editorTextFocus && !extension.vimKeymaps.insertMode"
             }
         ],
         "configuration": {
             "type": "object",
-            "title": "SimpleVim Configuration",
+            "title": "VimKeymaps Configuration",
             "properties": {
-                "simpleVim.yankHighlightBackgroundColor": {
+                "vimKeymaps.yankHighlightBackgroundColor": {
                     "type": "string",
                     "default": "#F8F3AB",
                     "description": "Background color that flashes to show the range when yanking."
@@ -65,16 +65,17 @@
         }
     },
     "scripts": {
-        "vscode:prepublish": "npm run compile",
-        "compile": "tsc -p ./",
-        "watch": "tsc -watch -p ./",
-        "postinstall": "node ./node_modules/vscode/bin/install",
-        "lint": "tslint -c tslint.json 'src/**/*.ts' --exclude 'src/test/*.ts'"
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"lint": "eslint \"src/**/*.ts\"",
+		"watch": "tsc -watch -p ./"
     },
     "devDependencies": {
-        "@types/node": "^10.5.1",
-        "tslint": "^5.10.0",
-        "typescript": "^2.9.2",
-        "vscode": "^1.1.18"
+		"@types/node": "^16.18.34",
+		"@types/vscode": "^1.73.0",
+		"@typescript-eslint/eslint-plugin": "^6.7.0",
+		"@typescript-eslint/parser": "^6.7.0",
+		"eslint": "^8.26.0",
+		"typescript": "^5.3.2"
     }
 }

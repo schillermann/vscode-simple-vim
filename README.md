@@ -157,10 +157,10 @@ SimpleVim prioritizes simplicity and integration with native VSCode features ove
 
 ## Settings
 
-The `y` (yank) operator temporarily changes the background color of the range being yanked to make it obvious what you're yanking. Otherwise you might not realize you yanked the wrong thing until you tried to put it somewhere else. You can change the background color it uses with the `simpleVim.yankHighlightBackgroundColor` setting.
+The `y` (yank) operator temporarily changes the background color of the range being yanked to make it obvious what you're yanking. Otherwise you might not realize you yanked the wrong thing until you tried to put it somewhere else. You can change the background color it uses with the `vimKeymaps.yankHighlightBackgroundColor` setting.
 
 ```json
 {
-    "simpleVim.yankHighlightBackgroundColor": "#F8F3AB"
+    "vimKeymaps.yankHighlightBackgroundColor": "#F8F3AB"
 }
 ```

@@ -5,30 +5,30 @@ import { VimState } from './vim_state_types';
 
 export function enterInsertMode(vimState: VimState): void {
     vimState.mode = Mode.Insert;
-    setModeContext('extension.simpleVim.insertMode');
+    setModeContext('extension.vimKeymaps.insertMode');
 }
 
 export function enterNormalMode(vimState: VimState): void {
     vimState.mode = Mode.Normal;
-    setModeContext('extension.simpleVim.normalMode');
+    setModeContext('extension.vimKeymaps.normalMode');
 }
 
 export function enterVisualMode(vimState: VimState): void {
     vimState.mode = Mode.Visual;
-    setModeContext('extension.simpleVim.visualMode');
+    setModeContext('extension.vimKeymaps.visualMode');
 }
 
 export function enterVisualLineMode(vimState: VimState): void {
     vimState.mode = Mode.VisualLine;
-    setModeContext('extension.simpleVim.visualLineMode');
+    setModeContext('extension.vimKeymaps.visualLineMode');
 }
 
 function setModeContext(key: string) {
     const modeKeys = [
-        'extension.simpleVim.insertMode',
-        'extension.simpleVim.normalMode',
-        'extension.simpleVim.visualMode',
-        'extension.simpleVim.visualLineMode',
+        'extension.vimKeymaps.insertMode',
+        'extension.vimKeymaps.normalMode',
+        'extension.vimKeymaps.visualMode',
+        'extension.vimKeymaps.visualLineMode',
     ];
 
     modeKeys.forEach(modeKey => {

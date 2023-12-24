@@ -117,10 +117,12 @@ export const actions: Action[] = [
     }),
 
     parseKeysExact(['d', 'd'], [Mode.Normal], (vimState, editor) => {
+        yankLine(vimState, editor);
         deleteLine(vimState, editor);
     }),
 
     parseKeysExact(['D'], [Mode.Normal], (vimState, editor) => {
+        yankToEndOfLine(vimState, editor);
         vscode.commands.executeCommand('deleteAllRight');
     }),
 
@@ -173,16 +175,6 @@ export const actions: Action[] = [
             );
         });
         flashYankHighlight(editor, highlightRanges);
-    }),
-
-    parseKeysExact(['r', 'r'], [Mode.Normal], (vimState, editor) => {
-        yankLine(vimState, editor);
-        deleteLine(vimState, editor);
-    }),
-
-    parseKeysExact(['R'], [Mode.Normal], (vimState, editor) => {
-        yankToEndOfLine(vimState, editor);
-        vscode.commands.executeCommand('deleteAllRight');
     }),
 
     parseKeysExact(['s', 's'], [Mode.Normal], (vimState, editor) => {

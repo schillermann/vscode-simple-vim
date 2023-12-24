@@ -107,13 +107,11 @@ Actions are miscellaneous commands that don't follow the well-defined patterns o
 | `u` | Undo. |
 | `Ctrl+r` | Redo. |
 | `dd` | Delete current line. |
-| `D` | Delete to the end of the line. |
+| `D` | Delete the characters under the cursor until the end of the line. |
 | `cc` | Delete current line and enter Insert mode. |
 | `C` | Delete to the end of the line and enter Insert mode. |
 | `yy` | Yank current line. |
 | `Y` | Yank to the end of the line. |
-| `rr` | Yank current line and delete it. |
-| `R` | Yank to the end of the line and delete it. |
 | `ss` | Select current line. |
 | `S` | Select to the end of the line. |
 | `x` | Delete character. |

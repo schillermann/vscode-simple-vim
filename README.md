@@ -7,7 +7,7 @@ Once you enter Insert mode it will be a completely vanilla VSCode experience: th
 
 ## Operators
 
-Operators act on a range of text. In Normal mode the range is specified by the OperatorRange typed after the operator. In Visual mode it is the visual selection.
+Operators act on a range of text. In Normal mode the range is specified by the operator range typed after the operator. In Visual mode it is the visual selection.
 
 | Keys | Description |
 |-|-|
@@ -18,9 +18,9 @@ Operators act on a range of text. In Normal mode the range is specified by the O
 | `s` | Select range and enter Visual mode. |
 
 
-## OperatorRanges
+## Operator Ranges
 
-OperatorRanges select a range for an Operator to act on. They must be used in Normal mode by typing an Operator and then an OperatorRange.
+Operator Ranges select a range for an Operator to act on. They must be used in Normal mode by typing an Operator and then an operator range.
 
 | Keys | Description |
 |-|-|
@@ -38,10 +38,10 @@ OperatorRanges select a range for an Operator to act on. They must be used in No
 | `iW` | Word (including punctuation) under cursor. |
 | `aw` | Word under cursor and whitespace after. |
 | `aW` | Word (including punctuation) under cursor and whitespace after. |
-| `f<char><char>` | From cursor to next occurrence (case sensitive) of <char><char>. |
-| `F<char><char>` | From cursor to previous occurrence (case sensitive) of <char><char>. |
-| `t<char>` | From cursor to next occurrence (case sensitive) of <char>. |
-| `T<char>` | From cursor to previous occurrence (case sensitive) of <char>. |
+| `f<char>` | From cursor to next occurrence (case sensitive) of `<char>`. |
+| `F<char>` | From cursor to previous occurrence (case sensitive) of `<char>`. |
+| `t<char>` | From cursor to next occurrence (case sensitive) of `<char>`. |
+| `T<char>` | From cursor to previous occurrence (case sensitive) of `<char>`. |
 | `gg` | From current line to first line of the document. |
 | `G` | From current line to last line of the document. |
 | `}` | From current line to beginning of next paragraph. |
@@ -71,10 +71,10 @@ Motions move the cursor and can be used in Normal or Visual mode. In Visual mode
 | `B` | Word (including punctuation) left. |
 | `e` | Word end right. |
 | `E` | Word end (including punctuation) right. |
-| `f<char><char>` | Next occurrence (case sensitive) of <char><char>. |
-| `F<char><char>` | Previous occurrence (case sensitive) of <char><char>. |
-| `t<char>` | Next occurrence (case sensitive) of <char>. |
-| `T<char>` | Previous occurrence (case sensitive) of <char>. |
+| `f<char>` | Next occurrence (case sensitive) of `<char>`. |
+| `F<char>` | Previous occurrence (case sensitive) of `<char>`. |
+| `t<char>` | Next occurrence (case sensitive) of `<char>`. |
+| `T<char>` | Previous occurrence (case sensitive) of `<char>`. |
 | `gg` | First line of the document. |
 | `G` | Last line of the document. |
 | `}` | Down a paragraph. |
@@ -88,7 +88,7 @@ Motions move the cursor and can be used in Normal or Visual mode. In Visual mode
 
 ## Actions
 
-Actions are miscellaneous commands that don't follow the well-defined patterns of Operators, OperatorRanges, or Motions.
+Actions are miscellaneous commands that don't follow the well-defined patterns of Operators, Operator Ranges, or Motions.
 
 | Keys | Description |
 |-|-|

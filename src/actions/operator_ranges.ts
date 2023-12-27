@@ -74,7 +74,7 @@ export const operatorRanges: OperatorRange[] = [
     createOperatorRangeExactKeys(['a', 'w'], false, createOuterWordHandler(wordRanges)),
     createOperatorRangeExactKeys(['a', 'W'], false, createOuterWordHandler(whitespaceWordRanges)),
 
-    createOperatorRangeRegex(/^f(..)$/, /^(f|f.)$/, false, (vimState, document, position, match) => {
+    createOperatorRangeRegex(/^f(.)$/, /^f$/, false, (vimState, document, position, match) => {
         const fromPosition = position.with({ character: position.character + 1 });
         const result = searchForward(document, match[1], fromPosition);
 
@@ -85,7 +85,7 @@ export const operatorRanges: OperatorRange[] = [
         }
     }),
 
-    createOperatorRangeRegex(/^F(..)$/, /^(F|F.)$/, false, (vimState, document, position, match) => {
+    createOperatorRangeRegex(/^F(.)$/, /^F$/, false, (vimState, document, position, match) => {
         const fromPosition = position.with({ character: position.character - 1 });
         const result = searchBackward(document, match[1], fromPosition);
 

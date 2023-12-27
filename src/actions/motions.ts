@@ -74,7 +74,7 @@ export const motions: Action[] = [
     parseKeysExact(['e'], [Mode.Normal, Mode.Visual], createWordEndHandler(wordRanges)),
     parseKeysExact(['E'], [Mode.Normal, Mode.Visual], createWordEndHandler(whitespaceWordRanges)),
 
-    parseKeysRegex(/^f(..)$/, /^(f|f.)$/, [Mode.Normal, Mode.Visual], (vimState, editor, match) => {
+    parseKeysRegex(/^f(.)$/, /^f$/, [Mode.Normal, Mode.Visual], (vimState, editor, match) => {
         findForward(vimState, editor, match);
 
         vimState.semicolonAction = (innerVimState, innerEditor) => {
@@ -86,7 +86,7 @@ export const motions: Action[] = [
         };
     }),
 
-    parseKeysRegex(/^F(..)$/, /^(F|F.)$/, [Mode.Normal, Mode.Visual], (vimState, editor, match) => {
+    parseKeysRegex(/^F(.)$/, /^F$/, [Mode.Normal, Mode.Visual], (vimState, editor, match) => {
         findBackward(vimState, editor, match);
 
         vimState.semicolonAction = (innerVimState, innerEditor) => {

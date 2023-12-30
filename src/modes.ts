@@ -36,12 +36,57 @@ function setModeContext(key: string) {
     });
 }
 
+function getCursorStyleConfig(mode: Mode): string {
+    const config = vscode.workspace.getConfiguration('vimKeymaps');
+    let cursorStyle: string | undefined
+
+    switch (mode) {
+        case Mode.Insert:
+            cursorStyle = config.get('cursorStyle.insertMode');
+            break
+        case Mode.Normal:
+            cursorStyle = config.get('cursorStyle.normalMode');
+            break
+        case Mode.Visual:
+            cursorStyle = config.get('cursorStyle.visualMode');
+            break
+        case Mode.VisualLine:
+            cursorStyle = config.get('cursorStyle.visualLine');
+            break
+        default:
+            throw new Error(`Unknown mode "${mode}"`);
+    }
+
+    if (cursorStyle === undefined) {
+        throw new Error('Cannot find cursor style in configuration');
+    }
+
+    return cursorStyle
+}
+
 export function setModeCursorStyle(mode: Mode, editor: vscode.TextEditor): void {
-    if (mode === Mode.Insert) {
-        editor.options.cursorStyle = vscode.TextEditorCursorStyle.Line;
-    } else if (mode === Mode.Normal) {
-        editor.options.cursorStyle = vscode.TextEditorCursorStyle.Underline;
-    } else if (mode === Mode.Visual || mode === Mode.VisualLine) {
-        editor.options.cursorStyle = vscode.TextEditorCursorStyle.LineThin;
+    const cursorStyle = getCursorStyleConfig(mode)
+
+    switch (cursorStyle) {
+        case 'line':
+            editor.options.cursorStyle = vscode.TextEditorCursorStyle.Line
+            break
+        case 'block':
+            editor.options.cursorStyle = vscode.TextEditorCursorStyle.Block
+            break
+        case 'underline':
+            editor.options.cursorStyle = vscode.TextEditorCursorStyle.Underline
+            break
+        case 'lineThin':
+            editor.options.cursorStyle = vscode.TextEditorCursorStyle.LineThin
+            break
+        case 'blockOutline':
+            editor.options.cursorStyle = vscode.TextEditorCursorStyle.BlockOutline
+            break
+        case 'underlineThin':
+            editor.options.cursorStyle = vscode.TextEditorCursorStyle.UnderlineThin
+            break
+        default:
+            throw new Error(`Cursor style "${cursorStyle}" is not valid`);
     }
 }

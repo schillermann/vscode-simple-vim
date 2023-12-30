@@ -60,6 +60,58 @@
                     "type": "string",
                     "default": "#F8F3AB",
                     "description": "Background color that flashes to show the range when yanking."
+                },
+                "vimKeymaps.cursorStyle.insertMode": {
+                    "type": "string",
+                    "enum": [
+                        "line",
+                        "block",
+                        "underline",
+                        "lineThin",
+                        "blockOutline",
+                        "underlineThin"
+                    ],
+                    "default": "line",
+                    "description": "Cursor style for editor when in INSERT mode."
+                },
+                "vimKeymaps.cursorStyle.normalMode": {
+                    "type": "string",
+                    "enum": [
+                        "line",
+                        "block",
+                        "underline",
+                        "lineThin",
+                        "blockOutline",
+                        "underlineThin"
+                    ],
+                    "default": "block",
+                    "description": "Cursor style for editor when in NORMAL mode."
+                },
+                "vimKeymaps.cursorStyle.visualMode": {
+                    "type": "string",
+                    "enum": [
+                        "line",
+                        "block",
+                        "underline",
+                        "lineThin",
+                        "blockOutline",
+                        "underlineThin"
+                    ],
+                    "default": "block",
+                    "description": "Cursor style for editor when in VISUAL mode."
+                },
+                "vimKeymaps.cursorStyle.visualLineMode": {
+                    "type": "string",
+                    "enum": [
+                        "line",
+                        "block",
+                        "underline",
+                        "lineThin",
+                        "blockOutline",
+                        "underlineThin"
+                    ],
+                    "default": "block",
+                    "description": "Cursor style for editor when in VISUAL LINE mode."
                 }
             }
         }

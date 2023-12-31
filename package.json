@@ -119,7 +119,7 @@
   "scripts": {
     "compile": "tsc -p ./",
     "format": "prettier --write \"./**/*.{ts,json,md}\"",
-    "lint": "eslint \"src/**/*.ts\"",
+    "lint": "eslint \"src/**/*.ts\" --fix",
     "vscode:prepublish": "npm run compile",
     "watch": "tsc -watch -p ./"
   },

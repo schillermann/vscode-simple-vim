@@ -1,6 +1,6 @@
 export enum Mode {
-    Insert,
-    Normal,
-    Visual,
-    VisualLine,
+  Insert,
+  Normal,
+  Visual,
+  VisualLine,
 }

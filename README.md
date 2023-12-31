@@ -148,7 +148,7 @@ VimKeymaps prioritizes simplicity and integration with native VSCode features ov
 - VimKeymaps does not support marks. If you're jumping back and forth often between two places in a file you can use VSCode's split window feature, and use `Cmd+1` and `Cmd+2` to focus them. If you just need to jump back to where you've been, you can use VSCode's `Ctrl+-`.
 
 ## Settings
-
+### Yank
 The `y` (yank) operator temporarily changes the background color of the range being yanked to make it obvious what you're yanking. Otherwise you might not realize you yanked the wrong thing until you tried to put it somewhere else. You can change the background color it uses with the `vimKeymaps.yankHighlightBackgroundColor` setting.
 
 ```json
@@ -156,3 +156,12 @@ The `y` (yank) operator temporarily changes the background color of the range be
   "vimKeymaps.yankHighlightBackgroundColor": "#F8F3AB"
 }
 ```
+### Cursor Style
+The cursor style is set by default as in vim. You can set a different cursor style for each mode.
+```json
+{
+  "vimKeymaps.cursorStyle.insertMode": "line"
+  "vimKeymaps.cursorStyle.normalMode": "block"
+  "vimKeymaps.cursorStyle.visualMode": "block"
+  "vimKeymaps.cursorStyle.visualLineMode": "block"
+}

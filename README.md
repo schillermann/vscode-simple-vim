@@ -125,6 +125,17 @@ Actions are miscellaneous commands that don't follow the well-defined patterns o
 | `zt`     | Scroll so that cursor is at the top of the screen.                      |
 | `zz`     | Scroll so that cursor is in the middle of the screen.                   |
 
+## Explorer
+
+| Keys | Description            |
+| ---- | ---------------------- |
+| `A`  | Create new folder.     |
+| `a`  | Create new file.       |
+| `d`  | Delete file or folder. |
+| `k`  | Scroll up.             |
+| `j`  | Scroll down.           |
+| `r`  | Rename file or folder. |
+
 ## Differences From Vim
 
 VimKeymaps prioritizes simplicity and integration with native VSCode features over compatability with Vim. If full Vim compatibility is important to you, consider trying a different extension. Here are some of the ways VimKeymaps is different from Vim.

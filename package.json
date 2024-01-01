@@ -66,6 +66,36 @@
       {
         "key": "ctrl+j",
         "command": "workbench.action.navigateDown"
+      },
+      {
+        "key": "j",
+        "command": "list.focusDown",
+        "when": "listFocus && !inputFocus"
+      },
+      {
+        "key": "k",
+        "command": "list.focusUp",
+        "when": "listFocus && !inputFocus"
+      },
+      {
+        "key": "a",
+        "command": "explorer.newFile",
+        "when": "filesExplorerFocus && !inputFocus"
+      },
+      {
+        "key": "shift+a",
+        "command": "explorer.newFolder",
+        "when": "filesExplorerFocus && !inputFocus"
+      },
+      {
+        "key": "r",
+        "command": "renameFile",
+        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+      },
+      {
+        "key": "d",
+        "command": "deleteFile",
+        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
       }
     ],
     "configuration": {

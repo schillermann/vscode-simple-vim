@@ -50,6 +50,22 @@
         "key": "ctrl+b",
         "command": "extension.vimKeymaps.scrollUpPage",
         "when": "editorTextFocus && !extension.vimKeymaps.insertMode"
+      },
+      {
+        "key": "ctrl+h",
+        "command": "workbench.action.navigateLeft"
+      },
+      {
+        "key": "ctrl+l",
+        "command": "workbench.action.navigateRight"
+      },
+      {
+        "key": "ctrl+k",
+        "command": "workbench.action.navigateUp"
+      },
+      {
+        "key": "ctrl+j",
+        "command": "workbench.action.navigateDown"
       }
     ],
     "configuration": {

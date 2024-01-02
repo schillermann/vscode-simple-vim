@@ -2,9 +2,9 @@
   "name": "vim-keymaps",
   "displayName": "Vim Keymaps",
   "description": "Vim Keymaps for VSCode",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "license": "MIT",
-  "publisher": "Mario Schillermann",
+  "publisher": "schillermann",
   "repository": {
     "type": "git",
     "url": "https://github.com/schillermann/vscode-vim-keymaps.git"
@@ -68,6 +68,26 @@
         "command": "workbench.action.navigateDown"
       },
       {
+        "key": "g g",
+        "command": "list.focusFirst",
+        "when": "listFocus && !inputFocus"
+      },
+      {
+        "key": "shift+g",
+        "command": "list.focusLast",
+        "when": "listFocus && !inputFocus"
+      },
+      {
+        "key": "h",
+        "command": "list.collapse",
+        "when": "listFocus && !inputFocus"
+      },
+      {
+        "key": "h",
+        "command": "previousCompressedFolder",
+        "when": "explorerViewletCompressedFocus && filesExplorerFocus && foldersViewVisible && !explorerViewletCompressedFirstFocus && !inputFocus"
+      },
+      {
         "key": "j",
         "command": "list.focusDown",
         "when": "listFocus && !inputFocus"
@@ -75,6 +95,31 @@
       {
         "key": "k",
         "command": "list.focusUp",
+        "when": "listFocus && !inputFocus"
+      },
+      {
+        "key": "l",
+        "command": "list.select",
+        "when": "listFocus && !inputFocus"
+      },
+      {
+        "key": "l",
+        "command": "nextCompressedFolder",
+        "when": "explorerViewletCompressedFocus && filesExplorerFocus && foldersViewVisible && !explorerViewletCompressedLastFocus && !inputFocus"
+      },
+      {
+        "key": "o",
+        "command": "list.toggleExpand",
+        "when": "listFocus && !inputFocus"
+      },
+      {
+        "key": "ctrl+d",
+        "command": "list.focusPageDown",
+        "when": "listFocus && !inputFocus"
+      },
+      {
+        "key": "ctrl+u",
+        "command": "list.focusPageUp",
         "when": "listFocus && !inputFocus"
       },
       {

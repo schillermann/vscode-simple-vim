@@ -127,14 +127,21 @@ Actions are miscellaneous commands that don't follow the well-defined patterns o
 
 ## Explorer
 
-| Keys | Description            |
-| ---- | ---------------------- |
-| `A`  | Create new folder.     |
-| `a`  | Create new file.       |
-| `d`  | Delete file or folder. |
-| `k`  | Scroll up.             |
-| `j`  | Scroll down.           |
-| `r`  | Rename file or folder. |
+| Keys     | Description            |
+| -------- | ---------------------- |
+| `Ctrl+d` | Scroll down full page. |
+| `Ctrl+u` | Scroll up full page.   |
+| `A`      | Create new folder.     |
+| `G`      | Go to the end.         |
+| `a`      | Create new file.       |
+| `d`      | Delete file or folder. |
+| `gg`     | Go to the beginning.   |
+| `h`      | Collapse list.         |
+| `j`      | Line down.             |
+| `k`      | Line up.               |
+| `l`      | Expand list.           |
+| `o`      | Open.                  |
+| `r`      | Rename file or folder. |
 
 ## Differences From Vim
 
